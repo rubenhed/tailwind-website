@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding-top: 96px;
+}
+
+.slide {
+  opacity: .5;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.bg-gad {
+  background-color: #003D94;
+}

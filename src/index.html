@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="css/output.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="p-3 shadow-sm fixed top-0 w-full z-40 bg-white">
+    <div class="container mx-auto flex md:items-center md:flex-row flex-col px-4 md:gap-8 my-4">
+      <div class="flex justify-between items-center">
+        <a href="#"><img src="images/logo.svg" alt="" class="h-10 hover:opacity-80 transition"></a>
+        <button><img src="images/burger-menu-svgrepo-com.svg" alt="" id="mobile-menu" class="md:hidden rounded h-10 hover:bg-slate-50"></button>
+      </div>
+      <div id="nav-menu" class="hidden md:flex gap-6 flex-row md:my-0 mt-2 bg-white flex-grow">
+        <a href="#" class="block p-2 font-semibold hover:bg-gray-50">Home</a>
+        <a href="#" class="block p-2 font-semibold hover:bg-gray-50">About</a>
+        <div>
+          <button class="dropdown-toggle p-2 flex items-center gap-1 hover:bg-gray-50 w-full">
+            <span class="font-semibold pointer-events-none">Products</span>
+            <img src="images/down-arrow-svgrepo-com.svg" alt="" class="h-2 transition-transform pointer-events-none">
+          </button>
+          <div class="hidden dropdown-menu md:absolute md:mt-4 md:w-24 rounded z-50 bg-white">
+            <a href="#" class="block p-2 hover:bg-gray-50">Prod 1</a>
+            <a href="#" class="block p-2 hover:bg-gray-50">Prod 2</a>
+            <a href="#" class="block p-2 hover:bg-gray-50">Prod 3</a>
+            <a href="#" class="block p-2 hover:bg-gray-50">Prod 4</a>
+          </div>
+        </div>
+        <div>
+          <button class="dropdown-toggle p-2 flex items-center gap-1 hover:bg-gray-50 w-full">
+            <span class="font-semibold pointer-events-none text-nowrap">After Sales</span>
+            <img src="images/down-arrow-svgrepo-com.svg" alt="" class="h-2 transition-transform pointer-events-none">
+          </button>
+          <div class="hidden dropdown-menu md:absolute md:mt-4 md:w-24 rounded z-50 bg-white">
+            <a href="#" class="block p-2 hover:bg-gray-50">Option 1</a>
+            <a href="#" class="block p-2 hover:bg-gray-50">Option 2</a>
+            <a href="#" class="block p-2 hover:bg-gray-50">Option 3</a>
+          </div>
+        </div>
+        <form class="flex md:ml-auto gap-2 md:mt-0 mt-2 overflow-visible" role="search">
+          <input class="border rounded px-2 py-1 w-full" type="search" placeholder="Search..." aria-label="Search">
+          <button class="" type="submit"><img src="images/magnifying-glass-svgrepo-com.svg" alt="" class="h-4"></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="slider">
+    <div class="slide"><img src="https://www.gadeliusmedical.com/images/mainVisual01sp.jpg" alt=""></div>
+    <div class="slide"><img src="https://www.gadeliusmedical.com/images/mainVisual02sp.jpg" alt=""></div>
+    <div class="slide"><img src="https://www.gadeliusmedical.com/images/mainVisual03sp.jpg" alt=""></div>
+    <div class="slide"><img src="https://www.gadeliusmedical.com/images/mainVisual04sp.jpg" alt=""></div>
+    <div class="slide"><img src="https://www.gadeliusmedical.com/images/mainVisual05sp.jpg" alt=""></div>
+    <div class="slide"><img src="https://www.gadeliusmedical.com/images/mainVisual06sp.jpg" alt=""></div>
+  </div>
+
+  <div class="container mx-auto">
+    <h1 class="py-8 text-xl font-bold">Products</h1>
+    <div class="cards grid md:grid-cols-4 grid-cols-2 gap-4">
+      <a href="#" class="card shadow-lg font-semibold group">
+        <img src="https://www.gadeliusmedical.com/en/products/images/pThumb08.jpg" alt="" class="transition group-hover:opacity-60 w-full">
+        <h2 class="p-3 border-t">Prod 1</h2>
+      </a>
+      <a href="#" class="card shadow-lg font-semibold group">
+        <img src="https://www.gadeliusmedical.com/en/products/images/jmn_main.jpg" alt="" class="transition group-hover:opacity-60 w-full">
+        <h2 class="p-3 border-t">Prod 2</h2>
+      </a>
+      <a href="#" class="card shadow-lg font-semibold group">
+        <img src="https://www.gadeliusmedical.com/en/products/images/tau_thumb_.jpg" alt="" class="transition group-hover:opacity-60 w-full">
+        <h2 class="p-3 border-t">Prod 3</h2>
+      </a>
+      <a href="#" class="card shadow-lg font-semibold group">
+        <img src="https://www.gadeliusmedical.com/en/products/images/skinanalyzerImg_thumb_2.jpg" alt="" class="transition group-hover:opacity-60 w-full">
+        <h2 class="p-3 border-t">Prod 4</h2>
+      </a>
+    </div>
+
+    <h1 class="py-8 text-xl font-bold">News & Events</h1>
+    <p>news thing here...</p>
+  </div>
+
+  <footer class="bg-gad mt-10 p-4">
+    <div class="container mx-auto text-white text-center">
+      <div class="flex justify-center gap-5">
+        <a href="#" class="opacity-75 transition hover:opacity-100">Home</a>
+        <a href="#" class="opacity-75 transition hover:opacity-100">About</a>
+        <a href="#" class="opacity-75 transition hover:opacity-100">Contact</a>
+      </div>
+      <div class="border-b my-3"></div>
+      <p>© 2024 Gadelius Industry</p>
+    </div>
+  </footer>
+
+
+  
+  <script src="js/navbar.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/slick/carousel.js"></script>
+</body>
+</html>
