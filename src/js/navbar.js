@@ -1,43 +1,42 @@
 TIMEOUT = 100;
+HOVER_SCREEN_SIZE = 768;
 
 //hamburger menu
 document.getElementById("mobile-menu").addEventListener("click", () => {
   document.getElementById("nav-menu").classList.toggle("hidden");
 })
 
+//all toggle menus
+toggleMenus = document.querySelectorAll(".dropdown-toggle");
+
 //dropdown hover
-document.querySelectorAll(".dropdown-toggle").forEach((toggleMenu) => {
+toggleMenus.forEach((toggleMenu) => {
   const dropdownMenu = toggleMenu.nextElementSibling;
   let hideTimeout;
 
-  toggleMenu.addEventListener("mouseenter", () => {
-    if (window.innerWidth > 768) {
+  const clearHideTimeout = () => clearTimeout(hideTimeout);
+
+  const showMenu = () => {
+    if (window.innerWidth > HOVER_SCREEN_SIZE) {
+      clearHideTimeout()
       toggleMenu.querySelector("img").classList.add("rotate-180");
       dropdownMenu.classList.remove("hidden");
-    };
-  });
+    }
+  };
 
-  toggleMenu.addEventListener("mouseleave", () => {
-    if (window.innerWidth > 768) {
+  const hideMenu = () => {
+    if (window.innerWidth > HOVER_SCREEN_SIZE) {
       hideTimeout = setTimeout(() => {
         toggleMenu.querySelector("img").classList.remove("rotate-180");
         dropdownMenu.classList.add("hidden");
       }, TIMEOUT);
-    };
-  });
+    }
+  };
 
-  dropdownMenu.addEventListener("mouseenter", () => {
-    clearTimeout(hideTimeout);
-  });
-
-  dropdownMenu.addEventListener("mouseleave", () => {
-    if (window.innerWidth > 768) {
-      hideTimeout = setTimeout(() => {
-        toggleMenu.querySelector("img").classList.remove("rotate-180");
-        dropdownMenu.classList.add("hidden");
-      }, TIMEOUT);
-    };
-  });
+  toggleMenu.addEventListener("mouseenter", showMenu);
+  toggleMenu.addEventListener("mouseleave", hideMenu);
+  dropdownMenu.addEventListener("mouseenter", clearHideTimeout);
+  dropdownMenu.addEventListener("mouseleave", hideMenu);
 });
 
 
@@ -45,7 +44,7 @@ document.querySelectorAll(".dropdown-toggle").forEach((toggleMenu) => {
 window.addEventListener("click", (event) => {
   const hidden = event.target.classList.contains("dropdown-toggle") && event.target.nextElementSibling.classList.contains("hidden");
 
-  document.querySelectorAll(".dropdown-toggle").forEach((toggleMenu) => {
+  toggleMenus.forEach((toggleMenu) => {
     toggleMenu.querySelector("img").classList.remove("rotate-180");
     toggleMenu.nextElementSibling.classList.add("hidden");
   });
