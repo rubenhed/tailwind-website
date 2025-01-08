@@ -6,7 +6,6 @@
 	<title>Document</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link href="css/output.css" rel="stylesheet">
   <link rel="icon" href="https://www.gadelius.com/favicon.ico">
 </head>
@@ -60,30 +59,47 @@
 
   <div class="container mx-auto">
     <h1 class="py-8 text-xl font-bold">Products</h1>
-    <div class="cards grid md:grid-cols-4 grid-cols-2 gap-4">
-      <a href="#" class="card shadow-lg font-semibold group">
-        <img src="https://www.gadelius.com/products/img/BrokkRemoteControlledDemolitionMachine.jpg" alt="" class="transition group-hover:opacity-60 w-full">
+    <div class="grid md:grid-cols-4 grid-cols-2 gap-4">
+      <a href="#" class="card shadow-lg font-semibold transition hover:opacity-60">
+        <img src="https://www.gadelius.com/products/img/BrokkRemoteControlledDemolitionMachine.jpg" alt="" class="w-full">
         <h2 class="p-3 border-t">Prod 1</h2>
       </a>
-      <a href="#" class="card shadow-lg font-semibold group">
-        <img src="https://www.gadelius.com/products/img01.jpg" alt="" class="transition group-hover:opacity-60 w-full">
+      <a href="#" class="card shadow-lg font-semibold transition hover:opacity-60">
+        <img src="https://www.gadelius.com/products/img01.jpg" alt="" class="w-full">
         <h2 class="p-3 border-t">Prod 2</h2>
       </a>
-      <a href="#" class="card shadow-lg font-semibold group">
-        <img src="https://www.gadelius.com/products/upload/Albin-mv.jpg" alt="" class="transition group-hover:opacity-60 w-full">
+      <a href="#" class="card shadow-lg font-semibold transition hover:opacity-60">
+        <img src="https://www.gadelius.com/products/upload/Albin-mv.jpg" alt="" class="w-full">
         <h2 class="p-3 border-t">Prod 3</h2>
       </a>
-      <a href="#" class="card shadow-lg font-semibold group">
-        <img src="https://www.gadelius.com/products/upload/rescue_intellitech_main.jpg" alt="" class="transition group-hover:opacity-60 w-full">
+      <a href="#" class="card shadow-lg font-semibold transition hover:opacity-60">
+        <img src="https://www.gadelius.com/products/upload/rescue_intellitech_main.jpg" alt="" class="w-full">
         <h2 class="p-3 border-t">Prod 4</h2>
       </a>
     </div>
-
-    <h1 class="py-8 text-xl font-bold">News & Events</h1>
-    <p>news thing here...</p>
   </div>
 
-  <footer class="bg-gad mt-10 p-4">
+  <div class="container mx-auto my-10 border rounded-sm">
+    <div class="grid grid-cols-2">
+
+      <div class="p-3 border-r">
+        <h1 class="text-xl font-bold">Latest news</h1>
+        <h2 class="font-semibold py-3">Subtitle here...</h2>
+        <p>news details here</p>
+        <img src="" alt="news image">
+      </div>
+
+      <div class="p-3">
+        <h1 class="text-xl font-bold">Upcoming events</h1>
+        <h2 class="font-semibold py-3">Subtitle here...</h2>
+        <p>event details here</p>
+        <img src="" alt="event image">
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-gad p-4">
     <div class="container mx-auto text-white text-center">
       <div class="flex justify-center gap-5">
         <a href="#" class="opacity-75 transition hover:opacity-100">Home</a>
