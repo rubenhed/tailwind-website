@@ -1,8 +1,8 @@
 
 $(window).on('load resize', () => {
   const ww = $(window).width();
-  const sw = 1000;
-  const centerPadding = Math.max((ww - sw) / 2, 50) + 'px';
+  const sw = 1380;
+  const centerPadding = Math.max((ww - sw) / 2, 30) + 'px';
   $('.slider').slick('slickSetOption', {
     centerPadding: centerPadding,
   });

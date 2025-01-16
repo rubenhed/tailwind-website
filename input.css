@@ -18,6 +18,18 @@ body {
   opacity: 1;
 }
 
+.slide img {
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .slide img {
+    height: 40vh;
+  }
+}
+
 .bg-gad {
   background-color: var(--bg-gad-color);
 }
@@ -36,3 +48,4 @@ body {
 .slick-dots li button {
   opacity: 0;
 }
+
